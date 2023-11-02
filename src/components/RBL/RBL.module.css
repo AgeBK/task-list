@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border: none;
+  width: 80%;
+  margin-bottom: 2rem;
+  margin-left: 10%;
+}
+
+.container span {
+  margin-top: 0.5rem;
+  width: 6.5rem;
+  height: 2.5rem;
+  display: inline-block;
+  position: relative;
+}
+
+.container label,
+.container input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-weight: bold;
+}
+
+.container input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.container input[value="Low"] + label {
+  border: 2px solid #008000;
+}
+
+.container input[value="Medium"] + label {
+  border: 2px solid #ff0;
+}
+
+.container input[value="High"] + label {
+  border: 2px solid #f00;
+}
+
+.container input[value="Low"]:checked + label {
+  background: #008000;
+}
+
+.container input[value="Medium"]:checked + label {
+  background: #ff0;
+}
+
+.container input[value="High"]:checked + label {
+  background: #f00;
+}
+
+.container label {
+  padding: 0.3rem 0.2rem 0;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  z-index: 90;
+}
+
+.container legend {
+  display: block;
+  font-weight: bold;
+  color: #777;
+  font-size: 1.1rem;
+}

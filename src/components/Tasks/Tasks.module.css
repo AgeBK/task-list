@@ -1,0 +1,243 @@
+.container {
+  margin: 2rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: baseline;
+}
+
+.taskCont {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  align-items: center;
+  padding: 1rem 1rem 1.5rem;
+}
+
+.taskCont:nth-child(even) {
+  background-color: #ececec;
+}
+
+.task {
+  width: 30%;
+  padding-right: 0.5rem;
+  position: relative;
+}
+
+.task .title {
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}
+
+.task .title:hover {
+  text-decoration: underline;
+}
+
+.notesCont {
+  background-color: #000;
+  margin-right: 5%;
+  color: #fff;
+  position: absolute;
+  border-radius: 1rem;
+  z-index: 1;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.notes {
+  display: none;
+}
+
+.noteTip.up {
+  border-bottom: 0.6rem solid #000;
+  position: absolute;
+  top: -6px;
+  left: 20px;
+}
+
+.block > div {
+  display: block;
+  padding: 0.5rem;
+}
+
+.priority,
+.date,
+.progress,
+.progressCircle,
+.actions {
+  width: 14%;
+}
+
+.hdr {
+  color: #91929e;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  display: inline-block;
+}
+
+.date > div {
+  color: #91929e;
+  font-size: 0.9rem;
+}
+
+.title.low {
+  color: #008000;
+}
+
+.title.medium {
+  color: #ffbd21;
+}
+
+.title.high {
+  color: #f00;
+}
+
+.progressBtn {
+  width: 6rem;
+  text-align: center;
+}
+
+.actions img {
+  cursor: pointer;
+}
+
+.edit {
+  margin-right: 1rem;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 0.6rem solid transparent;
+  border-right: 0.6rem solid transparent;
+  display: inline-block;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.down {
+  border-top: 0.6rem solid #008000;
+}
+
+.up {
+  border-bottom: 0.6rem solid #f00;
+}
+
+/*** CIRCLE STYLES ***/
+
+.circle {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.taskCont:nth-of-type(1) .circle {
+  margin-top: 1.3rem;
+}
+
+.circle .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.addTaskMode .circle .inner {
+  background: #555;
+}
+
+.circle.todo {
+  background-image: conic-gradient(#e9e8e9 100%, #fff 0);
+  transition: background 300ms ease-in 200m;
+}
+
+.circle.inprogress {
+  background-image: conic-gradient(#008000 50%, #e9e8e9 0);
+}
+
+.circle.done {
+  background-image: conic-gradient(#008000 100%, #e9e8e9 0);
+}
+
+@media screen and (max-width: 55rem) {
+  .date {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .taskCont {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+    padding: 0.5rem 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header > * {
+    margin-bottom: 0.5rem;
+  }
+
+  .priority,
+  .date,
+  .progress,
+  .progressCircle,
+  .actions {
+    width: 20%;
+  }
+
+  .progressCircle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 35rem) {
+  .actions {
+    text-align: right;
+  }
+
+  .actionImgs {
+    margin-left: 1rem;
+    text-align: right;
+  }
+
+  .actionImgs img {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .edit {
+    margin-right: 0;
+  }
+
+  .progress button {
+    width: 5rem;
+    font-size: 0.7rem;
+  }
+}

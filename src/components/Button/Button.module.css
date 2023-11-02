@@ -1,0 +1,41 @@
+.btn {
+  background-color: #000;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0.8rem rgba(113, 63, 255, 0.25);
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 0.2rem 0.6rem;
+  width: 6rem;
+  text-align: center;
+  height: 1.5rem;
+}
+
+.addTask {
+  height: 2.5rem;
+  width: auto;
+  font-size: 1.1rem;
+  padding: 0rem 1rem;
+}
+
+.addTask span {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+
+.deleteTask {
+  height: 2.5rem;
+  width: auto;
+  font-size: 1.1rem;
+  padding: 0rem 1rem;
+  background-color: #f00;
+  margin-left: 1rem;
+}
+
+.cancel {
+  background-color: #fff;
+  color: #000;
+  font-size: 1.1rem;
+}
